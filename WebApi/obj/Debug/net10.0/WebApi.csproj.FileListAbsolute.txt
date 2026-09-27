@@ -18,3 +18,4 @@ D:\Month 2\Project1\WebApi\obj\Debug\net10.0\refint\WebApi.dll
 D:\Month 2\Project1\WebApi\obj\Debug\net10.0\WebApi.pdb
 D:\Month 2\Project1\WebApi\obj\Debug\net10.0\WebApi.genruntimeconfig.cache
 D:\Month 2\Project1\WebApi\obj\Debug\net10.0\ref\WebApi.dll
+D:\Month 2\Project1\WebApi\obj\Debug\net10.0\WebApi.sourcelink.json

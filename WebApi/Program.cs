@@ -1,7 +1,6 @@
-﻿
-
-using Domain;
+﻿using Domain;
 using Infrastructure;
+
 Product product1 = new Product("Potato", 23);
 Product product2 = new Product("Tomato", 35);
 Product product3 = new Product("Carrot", 18);
@@ -44,12 +43,11 @@ while(true)
         case 1 :
         System.Console.WriteLine($"==================== Adding the product ====================\n");
         System.Console.Write($"Enter product's name: ");
-        string? name = Console.ReadLine();
+        string name = Console.ReadLine();
         System.Console.Write($"Enter product's price: ");
         decimal price = Convert.ToDecimal(Console.ReadLine());
         Product product = new Product(name, price);
         ser.AddProduct(product);
-        System.Console.WriteLine($"The product was added sucessfuly. ");
         break;
 
 
@@ -61,7 +59,7 @@ while(true)
             {
                 ser.GetProductById(id);
                 System.Console.Write($"Enter Name of product you want to update: ");
-                string? nameforupdate = Console.ReadLine();
+                string nameforupdate = Console.ReadLine();
                 System.Console.Write($"Enter price of product you want to update: ");
                 decimal priceforupdate = Convert.ToDecimal(Console.ReadLine());
                 Product productforupdate = new Product(nameforupdate, priceforupdate);
@@ -84,7 +82,7 @@ while(true)
         case 4 :
         System.Console.WriteLine($"==================== Finding the product by name ====================\n");
         System.Console.Write($"Enter name of product: ");
-        string? nameforfind = Console.ReadLine();
+        string nameforfind = Console.ReadLine();
         ser.FindProductsByName(nameforfind);
         break;
 
@@ -123,6 +121,10 @@ while(true)
 
         case 0 :
         return;
+
+        default:
+        System.Console.WriteLine($"Wrong number, please try again.");
+        break;
 
     }
 }

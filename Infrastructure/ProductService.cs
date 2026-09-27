@@ -32,8 +32,23 @@ public class ProductService
 
     public void AddProduct(Product product)
     {
+        bool a = true;
+        foreach(var prod in products)
+        {
+            if(prod.Name == product.Name)
+            {
+                a = false;
+            }
+        }
+        if(a == true)
+        {
         products.Add(product);
         System.Console.WriteLine($"The product was created sucessfuly.");
+        }
+        else
+        {
+            System.Console.WriteLine($"There is already this product in this list of products!");
+        }
     }
     public void UpdateProduct(Product product, int id)
     {
